@@ -1,0 +1,24 @@
+{
+  "name": "juju-wallet",
+  "version": "1.0.0",
+  "description": "Giftcards wallet",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CristianMoreno45/juju-wallet.git"
+  },
+  "keywords": [
+    "wallet",
+    "blockchain",
+    "juju"
+  ],
+  "author": "Cristian C Moreno B",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CristianMoreno45/juju-wallet/issues"
+  },
+  "homepage": "https://github.com/CristianMoreno45/juju-wallet#readme"
+}
