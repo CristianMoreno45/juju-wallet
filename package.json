@@ -4,21 +4,26 @@
   "description": "Giftcards wallet",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "jest",
+    "build": "microbundle"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CristianMoreno45/juju-wallet.git"
+    "url": "git+https://github.com/JUJU-SAS/juju-wallet.git"
   },
   "keywords": [
     "wallet",
     "blockchain",
     "juju"
   ],
-  "author": "Cristian C Moreno B",
+  "author": "Cristian C Moreno B <cmoreno45@uan.edu.co>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/CristianMoreno45/juju-wallet/issues"
+    "url": "https://github.com/JUJU-SAS/juju-wallet/issues"
   },
-  "homepage": "https://github.com/CristianMoreno45/juju-wallet#readme"
+  "homepage": "https://github.com/JUJU-SAS/juju-wallet#readme",
+  "devDependencies": {
+    "jest": "^28.1.1",
+    "microbundle": "^0.15.0"
+  }
 }
