@@ -2,10 +2,16 @@
   "name": "juju-wallet",
   "version": "1.0.0",
   "description": "Giftcards wallet",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "umd:main": "dist/index.umd.js",
+  "module": "dist/index.mjs",
+  "source": "src/index.js",
   "scripts": {
     "test": "jest",
-    "build": "microbundle"
+    "prebuild": "npm test",
+    "build": "microbundle",
+    "start": "node ./src/index.js",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -23,7 +29,36 @@
   },
   "homepage": "https://github.com/JUJU-SAS/juju-wallet#readme",
   "devDependencies": {
+    "@babel/preset-env": "^7.18.2",
+    "babel-jest": "^28.1.1",
+    "eslint": "^8.17.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^8.0.1",
     "jest": "^28.1.1",
-    "microbundle": "^0.15.0"
+    "lint-staged": "^13.0.1",
+    "microbundle": "^0.15.0",
+    "prettier": "^2.6.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{json,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
+    "react": "^18.1.0"
   }
 }
